@@ -6,6 +6,8 @@ package cap14.entidades;
 
 import java.time.LocalDate;
 import java.time.Duration;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 /**
  *
@@ -13,12 +15,13 @@ import java.time.Duration;
  */
 public class Reserva {
     Integer roomNumber;
-    LocalDate chekIn;
+    LocalDate checkIn;
     LocalDate checkOut;
-
+    
+    static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     public Reserva(Integer roomNumber, LocalDate chekIn, LocalDate checkOut) {
         this.roomNumber = roomNumber;
-        this.chekIn = chekIn;
+        this.checkIn = chekIn;
         this.checkOut = checkOut;
     }
     
@@ -35,27 +38,34 @@ public class Reserva {
     }
 
     public LocalDate getChekIn() {
-        return chekIn;
-    }
-
-    public void setChekIn(LocalDate chekIn) {
-        this.chekIn = chekIn;
+        return checkIn;
     }
 
     public LocalDate getCheckOut() {
         return checkOut;
     }
-
-    public void setCheckOut(LocalDate checkOut) {
-        this.checkOut = checkOut;
-    }
     
-    
-    public Integer duration(){
-        Duration d = Duration.between(chekIn, checkOut);
-    }
-    
-    public void updateData(LocalDate chekIn, LocalDate chekOut){
+    public long duration(){
         
+        return ChronoUnit.DAYS.between(checkIn, checkOut);
+    }
+    
+    public void updateData(LocalDate checkIn, LocalDate chekOut){
+        this.checkIn = checkIn;
+        this.checkOut = chekOut;
+    }
+    
+    @Override
+    public String toString(){
+        
+        return "Room: "
+                +this.roomNumber
+                +", check-in: "
+                +this.checkIn.format(dtf)
+                +", check-out: "
+                +this.checkOut.format(dtf)
+                +", "
+                +this.duration()
+                +" nights";
     }
 }

@@ -45,6 +45,7 @@ public class Main {
         //cap13.LerNformas.calCularAreas();
         //cap13.LerNpessoas.calcurlarImpostoDeN();
         //cap14.TryCatch.TestarTryCatch();
-        cap14.tryCatchFinally.executeTryCatch();
+        //cap14.tryCatchFinally.executeTryCatch();
+        cap14.FazerReservas.Reaserva();
     }
 }
