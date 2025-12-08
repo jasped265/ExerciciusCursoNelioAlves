@@ -44,16 +44,14 @@ public class FazerReservas {
             System.out.print("Check-in date (dd/MM/yyyy): ");
             dataOut = LocalDate.parse(sc.nextLine(), dtf);
             
-            LocalDate dataNow = LocalDate.now();
+            String error = reserva.updateData(dataIn, dataOut);
             
-            if((dataIn.isBefore(dataNow) || dataOut.isBefore(dataNow))){
-                System.out.println("Error in reservation: Reservation date for update must be future: "); 
-            }else if(!dataOut.isAfter(dataIn)){
-                System.out.println("Error in reservatation: Check-Out date must be after check-in date");
+            if(error != null){
+                System.out.println("ERROR in Reservation: "+error);
             }else{
-                reserva.updateData(dataIn, dataOut);
-                System.out.println("Reservation: "+reserva.toString());
-           }       
+               System.out.println("Reservation: "+reserva.toString()); 
+            }                        
        }  
+       sc.close();
     }
 }

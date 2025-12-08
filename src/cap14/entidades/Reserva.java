@@ -50,9 +50,19 @@ public class Reserva {
         return ChronoUnit.DAYS.between(checkIn, checkOut);
     }
     
-    public void updateData(LocalDate checkIn, LocalDate chekOut){
+    public String updateData(LocalDate checkIn, LocalDate chekOut){
+        LocalDate dataNow = LocalDate.now();
+            
+        if((checkIn.isBefore(dataNow) || chekOut.isBefore(dataNow))){
+              return "Error in reservation: Reservation date for update must be future: "; 
+        }else if(!chekOut.isAfter(checkIn)){
+            return "Error in reservatation: Check-Out date must be after check-in date";
+        }
+
         this.checkIn = checkIn;
         this.checkOut = chekOut;
+        
+        return null;
     }
     
     @Override
