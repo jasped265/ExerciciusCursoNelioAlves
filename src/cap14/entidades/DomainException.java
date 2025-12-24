@@ -9,5 +9,7 @@ package cap14.entidades;
  * @author jaspe
  */
 public class DomainException  extends Exception{
-    
+    public DomainException(String msg){
+        super(msg);
+    }
 }

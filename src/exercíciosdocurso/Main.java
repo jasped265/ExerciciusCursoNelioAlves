@@ -7,6 +7,7 @@ import cap8.*;
 import cap9.CadastrarConta;
 import cap10.*;
 import cap14.*;
+import cap16.*;
 
 import java.text.ParseException;
 /**
@@ -46,6 +47,13 @@ public class Main {
         //cap13.LerNpessoas.calcurlarImpostoDeN();
         //cap14.TryCatch.TestarTryCatch();
         //cap14.tryCatchFinally.executeTryCatch();
-        cap14.FazerReservas.Reaserva();
+        // cap14.FazerReservas.Reaserva();
+        //cap14.Account.processarConta();
+        //cap15.Arquivo.lerArquivo();
+        // cap15.FileBufferedWritter.escreverArquivo();
+        //cap15.LerFolder.processarFolder();
+        //cap15.LerCsv.processarCsv();
+        //Cap16.RealizarLocacao.realizarLocacao();
+        Cap16.ProcessarContrato.gerarParcelas();
     }
 }

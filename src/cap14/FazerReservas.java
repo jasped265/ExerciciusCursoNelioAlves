@@ -52,6 +52,9 @@ public class FazerReservas {
         catch(DomainException e){
             System.out.println("Error in reservation: "+e.getMessage());
         }
+        catch(Exception e){
+            System.out.println(""+e.getMessage());
+        }
                               
         sc.close();
     }
