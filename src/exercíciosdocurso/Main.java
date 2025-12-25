@@ -54,6 +54,8 @@ public class Main {
         //cap15.LerFolder.processarFolder();
         //cap15.LerCsv.processarCsv();
         //Cap16.RealizarLocacao.realizarLocacao();
-        Cap16.ProcessarContrato.gerarParcelas();
+        // Cap16.ProcessarContrato.gerarParcelas();
+        //Cap16.ProcessShape.figura();
+        cap16.LerNomeDoArquivo.ler();
     }
 }

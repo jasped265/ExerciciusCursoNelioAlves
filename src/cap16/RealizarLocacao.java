@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Cap16;
+package cap16;
 
-import Cap16.model.entidades.BrazilTaxService;
-import Cap16.model.entidades.CarRental;
-import Cap16.model.entidades.RentalService;
-import Cap16.model.entidades.Vehicle;
+import cap16.model.entidades.BrazilTaxService;
+import cap16.model.entidades.CarRental;
+import cap16.model.entidades.RentalService;
+import cap16.model.entidades.Vehicle;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.time.format.DateTimeFormatter;

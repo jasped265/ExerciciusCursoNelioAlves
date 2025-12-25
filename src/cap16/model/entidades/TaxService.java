@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package Cap16.model.entidades;
+package cap16.model.entidades;
 
 /**
  *
  * @author jaspe
  */
-public interface PaymentService {
-    Double tax(Double amount, int fator);
+public interface TaxService {
+     Double tax(double amount);
 }

@@ -2,8 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Cap16;
-import Cap16.model.entidades.*;
+package cap16;
+import cap16.model.entidades.PaypalTax;
+import cap16.model.entidades.Contrato;
+import cap16.model.entidades.ProcessPayment;
+import cap16.model.entidades.Parcela;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
