@@ -56,6 +56,14 @@ public class Main {
         //Cap16.RealizarLocacao.realizarLocacao();
         // Cap16.ProcessarContrato.gerarParcelas();
         //Cap16.ProcessShape.figura();
-        cap16.LerNomeDoArquivo.ler();
+        //cap16.LerNomeDoArquivo.ler();
+        //cap17.LerQunatidadeDeNnum.LerNum();
+        //cap17.MaiorProduto.ProcessarProduto();
+        //cap17.Curinga.copiarValor();
+        //cap17.WorkingWithSet.processSet();
+        //cap17.RegistroLog.processarLog(); 
+        //cap17.LerAlunosDeCursos.SomarAlunos();
+        //cap17.LerVotos.processarVoto();
+        cap18.ManipulaProdutos.Processar();
     }
 }
