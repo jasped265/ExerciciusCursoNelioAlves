@@ -4,17 +4,21 @@
  */
 package cap18.model.entidade;
 
-import java.util.Comparator;
+import java.util.function.Predicate;
 
 /**
  *
  * @author jaspe
  */
-public class ProductComparator implements Comparator<Produto>{
+public class ProductPredicate implements Predicate<Produto> {
 
+    public ProductPredicate() {
+    
+    }
+    
     @Override
-    public int compare(Produto p1, Produto p2) {
-        return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());   
+    public  boolean test(Produto t) {
+        return t.getPreco() > 100;
     }
     
 }

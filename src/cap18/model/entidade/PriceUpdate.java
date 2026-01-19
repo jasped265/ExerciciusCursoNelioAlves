@@ -4,17 +4,19 @@
  */
 package cap18.model.entidade;
 
-import java.util.Comparator;
+import java.util.function.Consumer;
 
 /**
  *
  * @author jaspe
  */
-public class ProductComparator implements Comparator<Produto>{
+public class PriceUpdate implements Consumer<Produto> {
 
     @Override
-    public int compare(Produto p1, Produto p2) {
-        return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());   
+    public void accept(Produto t) {
+        Double aumento = t.getPreco();
+        aumento += t.getPreco()*(0.1);
+        t.setPreco(aumento);
     }
     
 }

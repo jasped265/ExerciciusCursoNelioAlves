@@ -9,13 +9,21 @@ import cap18.model.entidade.Produto;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
  *
  * @author jaspe
  */
+
+
 public class ManipulaProdutos {
+    
+    public static int ComparProutos(Produto p1, Produto p2){
+        return 1;
+    }
+    
     public static void Processar(){
         Produto p1 = new Produto("Blue", 250.75);
         Produto p2 = new Produto("Tang", 150.80);
@@ -27,14 +35,32 @@ public class ManipulaProdutos {
         listaP.add(p2);
         listaP.add(p3);
         
-        public int compare {
-            
-        }
+        ProductComparator p = new ProductComparator();
         
-        listaP.sort(new ProductComparator());
+        //ArrowFucntion A
+        Comparator <Produto> comp = (pro1, pro2) ->{
+            return pro1.getNome().toUpperCase().compareTo(pro2.getNome());
+        };
         
-        for(Produto p : listaP){
-            System.out.println(""+p.toString());
+        //ArrowFunction B
+        Comparator<Produto> comp1 = (pr1, pr2) -> pr1.getNome().toUpperCase().compareTo(pr2.getNome());
+        
+        //Classe anonima:
+        //**********************************************************
+        /*Comparator<Produto> comp2 = new Comparator <Produto> (){
+            @Override
+            public int compare(Produto p1, Produto P2) {
+               return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
+            }
+        };*/
+        //************************************************************
+        
+        listaP.sort(p);
+        listaP.sort(ManipulaProdutos::ComparProutos);
+        for(Produto pr: listaP){
+            System.out.println(" "+p.toString());
         }
+       
+        //Collections.sort(listaP);
     }
-}
+}   

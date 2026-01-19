@@ -4,17 +4,17 @@
  */
 package cap18.model.entidade;
 
-import java.util.Comparator;
+import java.util.Locale;
+import java.util.function.Function;
 
 /**
  *
  * @author jaspe
  */
-public class ProductComparator implements Comparator<Produto>{
+public class FunctionUpperCase implements Function<Produto, String> {
 
     @Override
-    public int compare(Produto p1, Produto p2) {
-        return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());   
+    public String apply(Produto p) {
+        return p.getNome().toUpperCase();
     }
-    
 }

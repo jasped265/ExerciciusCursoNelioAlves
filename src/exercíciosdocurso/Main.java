@@ -64,6 +64,13 @@ public class Main {
         //cap17.RegistroLog.processarLog(); 
         //cap17.LerAlunosDeCursos.SomarAlunos();
         //cap17.LerVotos.processarVoto();
-        cap18.ManipulaProdutos.Processar();
+        //cap18.ManipulaProdutos.Processar();
+        //cap18.ProdutoMinimo.minimo();
+        //cap18.ProdutoMaximo.maximo();
+        //cap18.ProdutoUpperCase.upperCase();
+        //cap18.somaDeTprodutos.somarT();
+        //cap18.ToyingWithStreams.Streams();
+        //cap18.MediaDadosCsv.calcularMedia();
+        cap18.ExercicioDeFixacao.salarioMaior();
     }
 }
